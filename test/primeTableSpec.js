@@ -12,4 +12,13 @@ describe('table output', function () {
             done();
         })
     })
+
+    it('should have squared primes on the main diagonal', function (done) {
+        primeTable.generateMatrix(10, function (err, matrix) {
+            assert(matrix[0][0] === null);
+            assert(matrix[1][1] === 2 * 2);
+            assert(matrix[5][5] === 11 * 11);
+            done();
+        })
+    })
 }) 
