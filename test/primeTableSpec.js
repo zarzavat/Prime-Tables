@@ -1,6 +1,7 @@
 var assert = require('assert');
 var primeGenerator = new (require('../src/primeGenerator'))();
 var primeTable = new (require('../src/primeTable'))(primeGenerator);
+var firstTenPrimes = [2, 3, 5, 7, 11, 13, 17, 23, 27, 31];
 
 describe('table output', function () {
     it('should generate correct 2x2 matrix', function (done) {
@@ -21,4 +22,14 @@ describe('table output', function () {
             done();
         })
     })
+
+    it('should have primes[x] * primes[y] on matrix[x+1][y+1]', function (done) {
+        primeTable.generateMatrix(10, function (err, matrix) {
+            assert(matrix[3][6] === firstTenPrimes[2] * firstTenPrimes[5]);
+            assert(matrix[6][3] === firstTenPrimes[5] * firstTenPrimes[2]);
+            done();
+        })
+    })
+
+
 }) 
