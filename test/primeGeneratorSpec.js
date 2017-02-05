@@ -23,4 +23,11 @@ describe('prime generation', function () {
             done();
         })
     })
+
+    it('should generate 100000 primes', function (done) {
+        primeGenerator.generateFirstPrimes(100000, function (err, primes) {
+            console.log(primes);
+            done();
+        })
+    })
 }) 
