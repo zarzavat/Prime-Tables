@@ -1,10 +1,10 @@
 var Matrix = require('node-matrix');
 
-function PrimeTable(primeGenerator) {
+function PrimeTableCalculator(primeGenerator) {
     this.generator = primeGenerator;
 }
 
-PrimeTable.prototype.generateMatrix = function (n, callback) {
+PrimeTableCalculator.prototype.generateMatrix = function (n, callback) {
     var matrix = new Matrix({ rows: n + 1, columns: n + 1 });
     this.generator.generateFirstPrimes(n, function (err, primes) {
         matrix[0][0] = null;
@@ -23,4 +23,4 @@ PrimeTable.prototype.generateMatrix = function (n, callback) {
 
 };
 
-module.exports = PrimeTable;
+module.exports = PrimeTableCalculator;

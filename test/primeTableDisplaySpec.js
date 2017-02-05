@@ -1,6 +1,6 @@
 var assert = require('assert');
 var primeGenerator = new (require('../src/primeGenerator'))();
-var primeTable = new (require('../src/primeTable'))(primeGenerator);
+var primeTable = new (require('../src/primeTableCalculator'))(primeGenerator);
 var primeTableDisplay = new (require('../src/primeTableDisplay'))(primeTable);
 
 describe('table output', function () {
