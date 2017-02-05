@@ -17,5 +17,7 @@
     "jshint": "^2.9.4",
     "mocha": "^3.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-matrix": "^0.1.1"
+  }
 }
