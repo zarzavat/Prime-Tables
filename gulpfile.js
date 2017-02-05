@@ -24,7 +24,8 @@ gulp.task('respawn', ['lint', 'test'], function () {
     if (busy) { return; }
 
     function spawn() {
-        node = fork('.', { env: { NODE_ENV: 'development' } });
+        var args = ['of'];
+        node = fork('.', [7], { env: { NODE_ENV: 'development' } });
         busy = false;
     }
 

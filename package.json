@@ -2,10 +2,10 @@
   "name": "prime-tables",
   "version": "1.0.0",
   "description": "prime table generator",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "author": "mihai",
   "license": "ISC",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "node-matrix": "^0.1.1",
+    "prompt": "^1.0.0",
     "sprintf-js": "^1.0.3"
   }
 }

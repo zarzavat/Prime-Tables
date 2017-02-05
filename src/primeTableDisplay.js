@@ -6,6 +6,7 @@ function PrimeTableDisplay(primeTableCalculator) {
 }
 
 PrimeTableDisplay.prototype.getFormattedString = function (n, callback) {
+    n = Number(n);
     this.primeTableCalculator.generateMatrix(n, function (err, matrix) {
         var dim = matrix.dimensions[0];
         var generatedString = '';
@@ -23,7 +24,6 @@ PrimeTableDisplay.prototype.getFormattedString = function (n, callback) {
         callback(null, generatedString);
 
     });
-
 };
 
 module.exports = PrimeTableDisplay;
