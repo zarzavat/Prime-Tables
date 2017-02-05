@@ -6,7 +6,18 @@ function PrimeTableDisplay(primeTableCalculator) {
 }
 
 PrimeTableDisplay.prototype.getFormattedString = function (n, callback) {
-    n = Number(n);
+    try {
+        n = Number(n);
+    } catch (err) {
+        return callback(new TypeError('N is not a number'));
+    }
+    if (!Number.isInteger(n)) {
+        return callback(new TypeError('N is not an integer'));
+    }
+
+    if (n < 0 || n > 20) {
+        callback(new RangeError('N must be in [1,20]'));
+    }
     this.primeTableCalculator.generateMatrix(n, function (err, matrix) {
         var dim = matrix.dimensions[0];
         var generatedString = '';
