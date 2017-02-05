@@ -20,6 +20,7 @@ gulp.task('test', ['lint'], function () {
 var node, busy = false;
 var fork = require('child_process').fork;
 gulp.task('respawn', ['lint', 'test'], function () {
+    gutil.log('trying to respawn');
     if (busy) { return; }
 
     function spawn() {
