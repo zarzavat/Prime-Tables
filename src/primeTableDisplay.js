@@ -16,7 +16,7 @@ PrimeTableDisplay.prototype.getFormattedString = function (n, callback) {
     }
 
     if (n < 0 || n > 20) {
-        callback(new RangeError('N must be in [1,20]'));
+        return callback(new RangeError('N must be in [1,20]'));
     }
     this.primeTableCalculator.generateMatrix(n, function (err, matrix) {
         var dim = matrix.dimensions[0];
