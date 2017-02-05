@@ -1,0 +1,21 @@
+{
+  "name": "prime-tables",
+  "version": "1.0.0",
+  "description": "prime table generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "node app.js"
+  },
+  "author": "mihai",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-mocha": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {}
+}
