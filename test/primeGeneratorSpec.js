@@ -24,9 +24,10 @@ describe('prime generation', function () {
         })
     })
 
+    //because of how mocha is run, the test will fail if it doesn't return in 2 seconds
     it('should generate 100000 primes', function (done) {
         primeGenerator.generateFirstPrimes(100000, function (err, primes) {
-            console.log(primes);
+            assert(primes[99999] === 1299709);
             done();
         })
     })
